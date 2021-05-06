@@ -1,0 +1,25 @@
+{
+  "name": "vibracaoBLDC",
+  "version": "1.0.0",
+  "description": "![Esquema Técnico](https://user-images.githubusercontent.com/41194545/112141023-8adbce80-8bb3-11eb-8080-007ab0a298df.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenriqueFranc/VibracaoBLDC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HenriqueFranc/VibracaoBLDC/issues"
+  },
+  "homepage": "https://github.com/HenriqueFranc/VibracaoBLDC#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serialport": "^9.0.7",
+    "socket.io": "^4.0.1"
+  }
+}
