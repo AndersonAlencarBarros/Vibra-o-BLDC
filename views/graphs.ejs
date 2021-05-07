@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibração BLDC - Gráficos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>VIBRAÇÃO BLDC</h1>
+         <nav>
+            <ul class="nav_links">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/simular">Simulação</a></li>
+                
+            </ul>
+        </nav>
+         <ul class="buttons">            
+                 <button class="btn btn-iniciar">Iniciar</button>
+                 <button class="btn btn-parar">Parar</button>
+         </ul>       
+    </header>
+    <div class="back"></div>
+    <div class="content-graph">
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+           const socket = io();
+           socket.on('arduino:data',function(data){
+               console.log(data)
+           })
+        </script>
+        <img src="img/graph.png" alt="">
+    </div>
+    
+</body>
+</html>
