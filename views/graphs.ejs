@@ -24,6 +24,13 @@
     </header>
     <div class="back"></div>
     <div class="content-graph">
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+           const socket = io();
+           socket.on('arduino:data',function(data){
+               console.log(data)
+           })
+        </script>
         <img src="img/graph.png" alt="">
     </div>
     

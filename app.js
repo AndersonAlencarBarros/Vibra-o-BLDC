@@ -47,6 +47,8 @@ httpServer.listen(3000,()=>{
 
 //Comunicaçaõ com Arduino
 
+
+
 const mySerial = new SerialPort('COM3',{
    boudRate: 9600 
 }); //primeiro parametro e a porta conectada ao arduino segundo parametro e um objeto para configuração
@@ -58,9 +60,12 @@ mySerial.on('open',function(){
 mySerial.on('data',function(data){
 
     console.log(data.toString());
-    io.emit('arduino : data',{
+    io.emit('arduino:data',{
         value : data.toString()
     });
 
 }); //Monstrar os dados recebidos pelo arduino
 
+io.on('connection',function(socket){
+    console.log('A new socket connected')
+})
