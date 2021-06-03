@@ -1,6 +1,6 @@
 # Desenvolvimento de um sistema embarcado para detectar a vibração/desbalanceamento em motores BLDC.
 
-<img src="https://user-images.githubusercontent.com/41194545/112141023-8adbce80-8bb3-11eb-8080-007ab0a298df.jpg" alt="Esquema Técnico" style="zoom: 40%;" />
+<img src="https://user-images.githubusercontent.com/41194545/112141023-8adbce80-8bb3-11eb-8080-007ab0a298df.jpg" alt="Esquema Técnico" style="zoom: 20%;" />
 
 ## Executando o Projeto
 
