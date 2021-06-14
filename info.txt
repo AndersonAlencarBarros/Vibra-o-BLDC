@@ -3,4 +3,4 @@ Passos para ser executado o servidor
 2-Instalar o framework express (npm install express --save)
 3-Instalar a biblioteca ejs(npm install ejs)
 3-Instalar uma biblioteca para conexão serial(npm install serialport)
-4-Instalar a biblioteca socket.io(npm install socket.io) 
+4-Instalar a biblioteca socket.io(npm install socket.io)

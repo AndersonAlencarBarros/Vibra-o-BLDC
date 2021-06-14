@@ -38,6 +38,9 @@ app.get('/graphs',(req,res)=>{
 app.get('/simular',(req,res)=>{
     res.render('simular')
 })
+app.get('/results',(req,res)=>{
+    res.render('results')
+})
 
 httpServer.listen(3000,()=>{
     console.log('server na porta 3000')
