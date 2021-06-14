@@ -8,7 +8,7 @@
     <title>Vibração BLDC - Gráficos</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src='js/realTimeLineChart.js'></script>
+    <script src='js/circleChart.js'></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <ul class="nav_links">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/simular">Simulação</a></li>
-                <li><a href="/results">Resultados</a></li>
+                <li><a href="/graphs">Gráficos</a></li>
 
             </ul>
         </nav>
@@ -31,26 +31,22 @@
     <div class="content-graph">
         <script src="/socket.io/socket.io.js"></script>
         <script>
-            realTimeLineChart('.content-graph')
+            
+                cicleChart('.content-graph');
+                setInterval(() => {
+                    data = Math.random() * 360
+                    console.log(data)
+                    changeAngle(data)
+                }, 1100);
+            
+
 
             /*const socket = io();
             socket.on('arduino:data',function(data){
                 console.log(data)
                 render(data)
             })*/
-            var fase = 0;
-            setInterval(() => {
-                var data = []
-                fase-=2;
-                var freq = 20;
-                var fase_mark = 10;
-                for (var i = 0; i < 100; i++) {
-                    d = { tempo: i, mark: !((i - fase_mark-fase) % freq), accel: Math.sin((i - fase) / freq) }
-                    data.push(d)
-                }
-                console.log(data)
-                render(data)
-            }, 1100);
+
 
         </script>
         <!-- <img src="img/graph.png" alt=""> -->
